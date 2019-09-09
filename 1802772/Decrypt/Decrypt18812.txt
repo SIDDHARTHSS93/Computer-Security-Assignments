@@ -1,0 +1,24 @@
+#Input the Cipher Text 
+#while traversing through Ciphertext, we will take ASCII Value of characters into aascii
+#If Ascii value not [a-z] i.e. less than 97, if ascii is 46(.) or 32(space) print as it is.
+#Else subtract 65, this gives value of Capitsl letter, and subtract 11 to show, 11 backward shifts are needed to decipher this text, if text greater than Z use modulus to repeat A
+#If Ascii is small letter i.e. greater than 97, subtract 97 and subtract -11 to get character of plain text
+#Display Plain Decrypted Text
+
+Output:
+Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 08:06:12) [MSC v.1900 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+================= RESTART: C:/Users/admin/Desktop/Decrypt.py =================
+
+
+The Cipher Text is:
+ te td fyvyzhy szh pqqpnetgp esp nlpdlc ntaspc hld le esp etxp, mfe te td wtvpwj ez slgp mppy cpldzylmwj dpnfcp, yze wplde mpnlfdp xzde zq nlpdlc'd pypxtpd hzfwo slgp mppy twwtepclep lyo zespcd hzfwo slgp lddfxpo esle esp xpddlrpd hpcp hcteepy ty ly fyvyzhy qzcptry wlyrflrp. 
+
+
+Your New Plaintext is:
+it is unknown how effective the caesar cipher was at the timeU but it is likely to have been reasonably secureU not least because most of caesarPs enemies would have been illiterate and others would have assumed that the messages were written in an unknown foreign language. 
+
+
+
+

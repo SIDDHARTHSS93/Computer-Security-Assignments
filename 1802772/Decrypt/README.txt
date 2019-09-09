@@ -1,0 +1,1 @@
+Upon running exe file, the code should display the ciphertext and plaintext

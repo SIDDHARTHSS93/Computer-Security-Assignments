@@ -1,0 +1,75 @@
+#We will ask User to Enter E for Encryption and D for Decryption into variable Choose
+
+If User Selects E:
+#We will make alist Key List,that will take the input we provide at Key and enter unique characters once followed by the remaining characters in alphabet except J
+#We will Use Keymatrix to display keylist as 5*8 Matrix
+#We will Enter the Plain Text Message into message
+#We remove spaces and make Key and Message Upper Case 
+#We use count variable to denote odd or even number of blocks 0=even, 1=odd
+#If last character makes Message into odd number of characters add Z to make the message even, if last character is already Z Insert Q inot message.
+#If last character makes Message into odd number of characters add Z to make the message even.
+#If the ith and i+1th Character is same, insert X after ith character  
+#If the ith and i+1th Character is X, insert Y after ith character   
+#Replace J with I
+#Traverse through the message, if message is found in key, take the values of ith and i+1th Character into values value 1, value2,and value 3,value4 Respectively
+#if both characters fall in same Row in Key Matrix, if value is not the last column, take value2+1th and value4+1th Column into ciphertext
+#if both characters fall in same Column in Key Matrix, if value is not the last Row, take value1+1th and value3+1th Row into ciphertext
+#if both characters are in different rows and columns of the key matrix, form a rectange, and take the other ends of the rectangle into ciphertext
+#Display Cipher Text
+
+if User Selects D
+#We will make alist Key List,that will take the input we provide at Key and enter unique characters once followed by the remaining characters in alphabet except J
+#We will Use Keymatrix to display keylist as 5*5 Matrix
+#We will Enter the Cipher Text Message into ciphertext
+#We remove spaces and make Key and ciphertext Upper Case
+#We will search ciphertext's ith and i+1th value with key matrix, and if found store the 1st value positions into value 1 and value 2 and 2nd value's positions into value3 and value4
+#if both characters fall in same Row in Key Matrix, if value is not the last column, take value2-1th and value4-1th Column into message
+#if both characters fall in same Column in Key Matrix, if value is not the last Row, take value111th and value311th Row into message
+#if both characters are in different rows and columns of the key matrix, form a rectange, and take the other ends of the rectangle into message
+#If last character is Q and the 2nd last character is  Z remove Q, if last character is Z and 2nd last character is something else, remove Z
+#If ith value and i+2th value is same and X lies in i+1th value remove X
+#print message
+
+Output:
+Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 08:06:12) [MSC v.1900 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+================ RESTART: C:\Users\admin\Desktop\playfair.py ================
+Plese enter 'E' if you want to Encrypt and 'D' if you want to Decrypt:E
+Please Enter the secret Key:WHEATSTONE
+Please Enter your Plaintextthisisalookingglass
+['W', 'H', 'E', 'A', 'T', 'S', 'O', 'N', 'B', 'C', 'D', 'F', 'G', 'I', 'K', 'L', 'M', 'P', 'Q', 'R', 'U', 'V', 'X', 'Y', 'Z']
+The Plain Text is: thisisalookingglass
+19
+The Plain Text is: THISISALOXOKINGXGLASSZ
+The Cipher Text is: WEDBDBWQNVCFGBPEDPWBCU
+>>> 
+================ RESTART: C:\Users\admin\Desktop\playfair.py ================
+Plese enter 'E' if you want to Encrypt and 'D' if you want to Decrypt:D
+Please Enter the secret Key:WHEATSTONE
+[['W', 'H', 'E', 'A', 'T'], ['S', 'O', 'N', 'B', 'C'], ['D', 'F', 'G', 'I', 'K'], ['L', 'M', 'P', 'Q', 'R'], ['U', 'V', 'X', 'Y', 'Z']]
+Please Enter your ciphertext:WEDBDBWQNVCFGBPEDPWBCU
+22
+The Plain Text is: THISISALOOKINGGLASS
+>>> 
+
+
+    
+
+ 
+
+
+
+        
+
+
+         
+        
+       
+        
+
+
+
+    
+
+    

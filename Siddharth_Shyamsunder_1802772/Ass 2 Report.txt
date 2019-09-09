@@ -1,0 +1,62 @@
+﻿Q1)Combined Congruential method
+#We will store the values of private keys into private 1 and 2, private 1 and 2
+#will be the output of combined congruential method.
+#We will have alpha and q to obtain the public keys(x1 and x2) for the Diffie
+#Hellman's Algorithm.
+#we will use public keys x1 and x2 to generate secret key.
+#variables y1 and y2 2 random numbers intermediate values in the combined
+#congruential algorithm.
+#variables a1,a2,m1 and m2 are used to generate y1, y2, and x.
+#x holds the list of each generator value, or each private key in this case.
+
+Q2)Diffie Hellman's Algorithm
+#Once the private keys are generated. We will use private keys in the formula
+#X=a**private key mod q, where X is the public key x1 and x2,and 
+#the private keys are what we generated earlier.
+
+#Once we generate public keys x1 and x2 we will use them to generate secret keys,
+#we will use secret key=X**opp private mod q.
+#where opp private key is the opposite private key used. 
+
+Q3)RC4 Algorithm Encryption
+#Once Secret key is generate, we will divide it into its individual characters.
+#This is going to be used to generate list T.
+#We will ask user to enter a file name. This file will contain plain text which
+#we will convert to cipher text.
+#Also the 2nd user will enter the secret key, this is used to confirm that the
+#2nd user is genuine.
+#We will take the plaintext from the block and divide it into 64 bit blocks
+#In this case 8 characters, as each character is 8 bits in length.
+#if all blocks are of equal sizes, we will take the last block, else we will take the 2nd last block. 
+#We will create list s contsining a range from 0-255, and t which will
+#contain our secret key value as discussed earlier.  
+#we will find j as a value of j+s[i]+t[i] mod 256 and swap s[i] and s[j]
+#In the end we get a new s array. Now we will give new values for i and j and again swap s[i] and s[j]
+#In the end we get a new s array. Now we will give new values for i and j and again swap s[i] and s[j]
+#we will take the last value as s[t] and store it in k. This k will be used to encrypt the block of plaintext
+#We will then take key k and xor with the ascii value of plain text, and convert the new integer list to a character string
+#This new character String is the cipher text.
+
+Q4)RC4 Algorithm Decryption
+#We will ask the user to provide cipher text. We will use the cipher text to generatean integer matrix.
+#We will use the key k to xor the cipher text back to plain text.
+
+OUTPUT:
+Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 08:06:12) [MSC v.1900 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+=============== RESTART: C:\Users\admin\Desktop\Ass2\random.py ===============
+The first Private Key is: 291
+The second Private Key is: 332
+The Secret Key is: 2
+Please Enter the file Name:test.txt
+Please Enter the Secret Key:2
+
+
+The Block of plain text is:
+  text fi
+The Encrypted Text is: ssjwssgn
+Please enter the ciphertext:ssjwssgn
+The decrypted text is:  text fi
+>>> 
+
